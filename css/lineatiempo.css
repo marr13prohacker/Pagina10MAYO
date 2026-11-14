@@ -1,0 +1,214 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Segoe UI', cursive;
+    background: linear-gradient(135deg, #ffe6f0, #fff0f5);
+    overflow-x: hidden;
+    color: #6b3e5e;
+    padding: 20px;
+}
+
+.btn-regresar {
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    padding: 12px 25px;
+    background-color: #ff4f7c;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.btn-regresar:hover {
+    background-color: #e91e63;
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.8em;
+    color: #ff69b4;
+    animation: fadeIn 2s ease;
+}
+
+/* Corazones flotando */
+.hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    color: #ff85a2;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #ffb6c1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+}
+
+.container {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+    animation: fadeInUp 1s ease;
+}
+
+.left { left: 0; }
+.right { left: 50%; }
+
+.container::before {
+    content: '💖';
+    position: absolute;
+    top: 20px;
+    right: -15px;
+}
+
+.right::before {
+    left: -15px;
+    right: auto;
+}
+
+/* Caja */
+.content {
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content:hover {
+    transform: scale(1.05);
+}
+
+/* Extra */
+.extra {
+    display: none;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.content.active .extra {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.extra img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-top: 20px;
+    }
+
+    .btn-regresar {
+        margin: 0;
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+
+    .timeline {
+        margin: 30px auto;
+        padding: 10px;
+    }
+
+    .timeline::after { left: 20px; }
+
+    .container {
+        width: 100%;
+        padding: 15px 0 15px 50px;
+    }
+
+    .right { left: 0; }
+
+    .container::before {
+        left: 8px;
+        right: auto;
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    .content h2 {
+        font-size: 1.2em;
+    }
+
+    .content p {
+        font-size: 0.95em;
+    }
+
+    .extra img {
+        max-width: 100%;
+    }
+}

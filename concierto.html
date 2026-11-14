@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conciertos con Mami 💖</title>
+
+    <link rel="stylesheet" href="css/conciertos.css">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- BRILLITOS -->
+    <div class="sparkle s1">✨</div>
+    <div class="sparkle s2">🎵</div>
+    <div class="sparkle s3">💖</div>
+    <div class="sparkle s4">🌸</div>
+
+    <!-- BOTÓN -->
+    <a href="index.html" class="btn-regresar">
+        ← Volver al inicio
+    </a>
+
+    <!-- CONTENEDOR -->
+    <section class="container">
+
+        <!-- IZQUIERDA -->
+        <div class="left">
+
+            <div class="texto-box">
+
+                <h1>
+                    Conciertos contigo 🎶
+                </h1>
+
+                <p class="mensaje">
+                    Estos son algunos de los conciertos a los que has ido 💖
+                    <br><br>
+                    Espero que en el futuro podamos vivir muchísimos más juntas 🌸✨
+                </p>
+
+                <!-- SELECT -->
+                <div class="selector-box">
+
+                    <label for="imageSelect">
+                        Escoge un concierto 🎵
+                    </label>
+
+                    <select id="imageSelect" onchange="cambiarImagen()">
+
+                        <option value="IMAGENES/concierto.jpeg">
+                            Shakira 💃
+                        </option>
+
+                        <option value="IMAGENES/mon.jpeg">
+                            Mon Laferte 🌙
+                        </option>
+
+                        <option value="IMAGENES/miranda.jpeg">
+                            Miranda ✨
+                        </option>
+
+                        <option value="IMAGENES/yuridia.jpeg">
+                            Yuridia 🎤
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- FLORES -->
+            <div class="flores">
+
+                <img src="IMAGENES/flor.webp" alt="">
+                <img src="IMAGENES/flor.webp" alt="">
+                <img src="IMAGENES/flor.webp" alt="">
+
+            </div>
+
+        </div>
+
+        <!-- DERECHA -->
+        <div class="right">
+
+            <!-- FOTO PRINCIPAL -->
+            <div class="foto-card">
+
+                <img id="mamiImage" src="IMAGENES/concierto2.jpeg" alt="concierto">
+
+                <div class="vinilo">
+                    💿
+                </div>
+
+            </div>
+
+            <!-- FOTO FLOTANTE -->
+            <div class="mini-photo">
+
+                <img src="IMAGENES/concierto2.jpeg" alt="mini">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function cambiarImagen(){
+
+            const select =
+            document.getElementById('imageSelect');
+
+            const img =
+            document.getElementById('mamiImage');
+
+            img.style.opacity = 0;
+
+            setTimeout(() => {
+
+                img.src = select.value;
+
+                img.style.opacity = 1;
+
+            },300);
+
+        }
+
+    </script>
+
+    <footer class="footer">
+
+        <p>
+            Hecho con mucho amor 💖 para compartir momentos especiales 🎶
+        </p>
+
+        <div class="footer-icons">
+            ✨ 🎵 🌸 💿
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

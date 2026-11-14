@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cartita para Mami 💖</title>
+
+<link rel="stylesheet" href="css/carta.css">
+
+<!-- FUENTES -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- BRILLITOS -->
+<div class="sparkle s1">✨</div>
+<div class="sparkle s2">💖</div>
+<div class="sparkle s3">🌸</div>
+<div class="sparkle s4">🦋</div>
+
+<!-- BOTÓN -->
+<a href="index.html" class="btn-regresar">
+
+← Volver al inicio
+
+</a>
+
+<!-- INTRO -->
+<div class="intro">
+
+    <h1>
+        Una cartita especial 💌
+    </h1>
+
+    <p>
+        Hice esto con muchísimo amor para ti 🌸
+    </p>
+
+</div>
+
+<!-- BOTÓN -->
+<button class="boton" onclick="abrir()">
+
+    Abrir sorpresa 💖
+
+</button>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay">
+
+    <!-- CERRAR -->
+    <button class="cerrar" onclick="cerrar()">
+
+        ✕
+
+    </button>
+
+    <!-- SOBRE -->
+    <div class="sobre" onclick="toggleSobre(event)">
+
+        <!-- TAPA -->
+        <div class="tapa"></div>
+
+        <!-- CORAZÓN -->
+        <div class="corazon-centro">
+            💖
+        </div>
+
+        <!-- CARTA -->
+        <div class="carta">
+
+            <h2>
+                Para mi mami 🌸
+            </h2>
+
+            <!-- VIDEO -->
+            <div class="video-box">
+
+                <video controls playsinline>
+
+                    <source src="IMAGENES/video.MP4" type="video/mp4">
+
+                </video>
+
+            </div>
+
+            <!-- TEXTO -->
+            <p>
+
+                No encuentro las palabras para agradecerte por todo lo que haces por mí 💕
+
+                <br><br>
+
+                Tampoco sé cómo describir lo mucho que te amo.
+
+                <br><br>
+
+                Gracias por cuidarme, escucharme y apoyarme siempre 🌷
+
+                <br><br>
+
+                Eres una mujer increíble y admiro muchísimo todo lo que haces.
+
+                <br><br>
+
+                Eres mi persona favorita en todo el mundo entero ✨
+
+                <br><br>
+
+                “Mi mayor inspiración viene de mi mejor amiga, Miriam Nestor.
+
+                <br><br>
+
+                Mi madre nunca me dio la idea de que no pudiera hacer lo que quisiera o ser quien quisiera ser.
+
+                <br><br>
+
+                Llenó nuestra casa de amor, diversión, libros y música.
+
+                <br><br>
+
+                Mientras me guiaba a través de estos increíbles dieciséis años,
+                no sé si alguna vez se dio cuenta de que la persona que más quería ser era ella.”
+
+                <br><br>
+
+                Gracias, mamá 💖
+
+                <br><br>
+
+                Te amo muchísimo.
+
+            </p>
+
+            <!-- FOTO POLAROID -->
+            <div class="foto-final">
+
+                <img src="IMAGENES/gilmore" alt="fotito especial">
+
+                <span>
+                    La Lorelai de mi Rory 💖
+                </span>
+
+            </div>
+
+            <!-- DECORACIÓN -->
+            <div class="decoraciones">
+
+                🌸 ✨ 💌 💖 🌷
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+
+function abrir(){
+
+    document.getElementById("overlay")
+    .style.display = "flex";
+
+}
+
+function cerrar(){
+
+    document.getElementById("overlay")
+    .style.display = "none";
+
+}
+
+function toggleSobre(e){
+
+    e.currentTarget.classList.toggle("abierto");
+
+}
+
+</script>
+
+</body>
+
+</html>

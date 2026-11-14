@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Máquina de Abracitos 💖</title>
+
+<link rel="stylesheet" href="css/pagina3.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- BRILLOS -->
+<div class="heart heart1">💖</div>
+<div class="heart heart2">🌸</div>
+<div class="heart heart3">✨</div>
+<div class="heart heart4">🦋</div>
+
+<!-- BOTÓN -->
+<a href="index.html" class="btn-regresar">
+    ← Volver
+</a>
+
+<!-- TITULO -->
+<section class="titulo">
+
+    <h1>
+        Máquina de Abracitos 💌
+    </h1>
+
+    <p>
+        Una máquina infinita de amor para mami ✨
+    </p>
+
+</section>
+
+<!-- POLAROID 1 -->
+<div class="polaroid polaroid1">
+
+    <img src="IMAGENES/guapa.jpeg" alt="mami">
+
+    <span>
+        mi mami hermosa 💖
+    </span>
+
+</div>
+
+<!-- POLAROID 2 -->
+<div class="polaroid polaroid2">
+
+    <img src="IMAGENES/bautizo.jpeg" alt="foto bonita">
+
+    <span>
+        Bendecida 🌸
+    </span>
+
+</div>
+
+<!-- MAQUINA -->
+<section class="arcade">
+
+    <!-- LUCES -->
+    <div class="top">
+
+        <div class="lucecita roja"></div>
+        <div class="lucecita amarilla"></div>
+        <div class="lucecita verde"></div>
+
+    </div>
+
+    <!-- PANTALLA -->
+    <div class="pantalla" id="pantalla">
+
+        Hola mami 💖
+
+    </div>
+
+    <!-- BOTONES -->
+    <div class="botones">
+
+        <button onclick="mostrarMensaje('💖 Te mando un abrazotote y besitoooos de lejitos mami')">
+
+            Abracito
+
+        </button>
+
+        <button onclick="mostrarMensaje('🌸 Gracias por todo lo que haces por mí')">
+
+            Gracias
+
+        </button>
+
+        <button onclick="mostrarMensaje('🧡 Eres mi lugar favorito y mi persona favorita')">
+
+            Favorita
+
+        </button>
+
+        <button onclick="mostrarMensaje('✨ Todo es mejor contigo a mi lado')">
+
+            Magia
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- PREMIOS -->
+<section class="premios">
+
+    <h2>
+        Premios secretos 💌
+    </h2>
+
+    <div class="sobres-container">
+
+        <div class="sobre"
+        onclick="abrirSobre(this,'💖 Eres la mejor mamá del mundo mundial')">
+
+            ✉️
+
+        </div>
+
+        <div class="sobre"
+        onclick="abrirSobre(this,'🌸 Gracias por siempre cuidarme y estar ahí para mí')">
+
+            ✉️
+
+        </div>
+
+        <div class="sobre especial"
+        onclick="abrirSobre(this,'✨ Te amo muchísimo 💕')">
+
+            💌
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SCRIPT -->
+<script>
+
+function mostrarMensaje(texto){
+
+    const pantalla =
+    document.getElementById("pantalla");
+
+    pantalla.classList.remove("animacion");
+
+    void pantalla.offsetWidth;
+
+    pantalla.innerHTML = texto;
+
+    pantalla.classList.add("animacion");
+}
+
+function abrirSobre(elemento, mensaje){
+
+    elemento.innerHTML = `
+
+        <div class="mensaje-sobre">
+            ${mensaje}
+        </div>
+
+    `;
+
+    elemento.classList.add("abierto");
+}
+
+</script>
+
+</body>
+
+</html>
